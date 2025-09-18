@@ -1,0 +1,51 @@
+
+/* Animation Base Styles */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay variations for staggered animations */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+
+/* Section transition animations */
+.section {
+  transition: opacity 0.6s ease-out;
+}
+
+/* Smooth scrolling for in-page section navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll,
+  .animate-on-scroll.animated {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* For the page transition effect */
+.transition-panel {
+  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+/* Above-the-fold hero/page titles should be visible immediately (no scroll reveal) */
+.hero .hero-title.animate-on-scroll,
+.page-hero .page-title.animate-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+}
