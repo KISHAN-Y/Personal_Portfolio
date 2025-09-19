@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if(ticker) {
         // You should replace these with your actual logo image paths
         const logos = [
-            '../images/Logo=adobe.svg',
+            './images/Logo=framer.svg',
             '../images/Logo=framer.svg',
             '../images/Logo=google.svg',
             '../images/Logo=shopify.svg',
