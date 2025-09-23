@@ -117,7 +117,6 @@
   const initCardHover = () => {
     if (prefersReduced) return; // Respect reduced motion
     const hoverSelectors = [
-      '.case-card',
       '.team-member-card',
       '.strategy-card',
       '.journey-card'
@@ -126,7 +125,7 @@
     if (!cards.length) return;
 
     cards.forEach(card => {
-      const img = card.querySelector('.case-card-image img, .team-member-image img');
+      const img = card.querySelector('.team-member-image img');
       const reset = () => {
         gsap.to(card, { y: 0, rotateX: 0, rotateY: 0, duration: 0.4, ease: 'power2.out' });
         if (img) gsap.to(img, { scale: 1, duration: 0.4, ease: 'power2.out' });

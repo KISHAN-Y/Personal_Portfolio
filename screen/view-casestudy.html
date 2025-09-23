@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/grid-cards.css">
     <link rel="stylesheet" href="../css/scrollAnimationStyles.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
@@ -24,29 +25,38 @@
             <a href="../index.html" class="logo-container">
                 <img src="../images/logo.png" alt="Kishan Yadav logo">
             </a>
-            <nav class="nav-links">
+            <nav class="nav-links" id="nav-menu">
                 <a href="about.html">About Me</a>
                 <a href="Education.html">Educational Journey</a>
                 <a href="casestudy.html">My Projects</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <div class="header-actions">
-                <a href="#" class="btn btn-dark">Download CV</a>
-            </div>
+        <div class="header-actions">
+            <a href="#" class="btn btn-dark desktop-only">Download CV</a>
+            <button class="mobile-menu-btn">
+                <span class="menu-icon"></span>
+            </button>
+        </div>
         </div>
     </header>
 
     <main>
-        <section class="case-study-hero"
-            style="background-image: url('https://images.unsplash.com/photo-1557804506-669b22e16d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80'); background-size: cover; background-position: center;">
-            <div class="hero-background" style="background: rgba(0,0,0,0.6);"></div>
+        <section class="case-study-hero">
+            <div class="hero-video-background">
+                <video autoplay muted loop playsinline class="desktop-video">
+                    <source src="../images/MOCKUP/KAMDHENU/kamdhenu.mp4" type="video/mp4">
+                </video>
+                <video autoplay muted loop playsinline class="mobile-video">
+                    <source src="../images/MOCKUP/KAMDHENU/vertical.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="container hero-content">
                 <div class="hero-tag">Featured Project</div>
                 <div class="case-study-client">
                     <span class="client-badge">Project</span>
                     <span class="client-name">Kamadhenu Papers</span>
                 </div>
-                <h1 class="case-study-title">Full-Stack E-commerce Website Development</h1>
+                <h1 class="case-study-title">Full-Stack <br>E-commerce Website Development</h1>
                 <div class="case-study-subtitle">
                     <span class="highlight">Developing a full-stack e-commerce platform</span> with a focus on a
                     responsive frontend and robust backend functionalities.
@@ -404,6 +414,7 @@
     <script src="../js/gsap-enhancements.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/scroll-observer.js"></script>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>
